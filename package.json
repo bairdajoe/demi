@@ -2,6 +2,7 @@
   "name": "demi-dungeons",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://demidungeons.netlify.app",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
