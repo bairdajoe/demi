@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Phaser from 'phaser';
+import GameScene from './scenes/GameScene';
 
 function App() {
-  return (
-    <div>
-      <h1>Welcome to Demi Dungeons</h1>
-      <p>This is a working live deployment of your game base.</p>
-    </div>
-  );
+  useEffect(() => {
+    const config = {
+      type: Phaser.AUTO,
+      width: 800,
+      height: 600,
+      backgroundColor: '#1d1d1d',
+      parent: 'phaser-container',
+      scene: [GameScene],
+    };
+
+    new Phaser.Game(config);
+  }, []);
+
+  return <div id="phaser-container" style={{ width: '100vw', height: '100vh' }} />;
 }
 
 export default App;
